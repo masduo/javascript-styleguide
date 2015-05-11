@@ -1,37 +1,40 @@
-# JustPark Javascript styleguide
+# JustPark JavaScript Style Guide
 
-- Line length
-- Commas
-- Semicolons
-- Whitespace
-- Blocs
-- Comments
-- Strings
-- Operators
-- Dynamic
-- Hoising
-- Type conversion
-- Numbers
-- Undefined, null
-- Arrays
-- Conditionals
-- Properties
-- Functions
-- Hoisting
-- First class citizern
-- Objects
-- Classes
-- Constructors
-- Accessors
-- Inheritance
-- Modules
-- Encapsulation
-- Events
-- Garbage collection
-- Promisses
-- Callbacks
-- Browser
-- Naming conventions
+
+## Table of Contents
+
+  1. [Line length](#line-length)
+  1. [Commas](#commas)
+  1. [Semicolons](#semicolons)
+  1. [Whitespace](#whitespace)
+  1. [Blocks](#blocks)
+  1. [Comments](#comments)
+  1. [Strings](#strings)
+  1. [Operators](#operators)
+  1. [Dynamic](#dynamic)
+  1. [Hoising](#hoising)
+  1. [Type conversion](#type-conversion)
+  1. [Numbers](#numbers)
+  1. [Undefined, null](#undedined-null)
+  1. [Arrays](#arrays)
+  1. [Conditionals](#conditionals)
+  1. [Properties](#properties)
+  1. [Functions](#functions)
+  1. [Hoisting](#hoisting)
+  1. [First class citizern](#first-class-citizern)
+  1. [Objects](#objects)
+  1. [Classes](#classes)
+  1. [Constructors](#constructors)
+  1. [Accessors](#accessors)
+  1. [Inheritance](#inheritance)
+  1. [Modules](#modules)
+  1. [Encapsulation](#encapsulation)
+  1. [Events](#events)
+  1. [Garbage collection](#garbage-collection)
+  1. [Promisses](#promisses)
+  1. [Callbacks](#callbacks)
+  1. [Browser](#browser)
+  1. [Naming conventions](#naming-conventions)
 
 ## Line length
 
@@ -120,7 +123,7 @@ function() {
 }
 ```
 
-- No linebreak at the begining of files.
+- No linebreak at the beginning of files.
 - Single linebrear at the end of files.
 
 ```JavaScript
@@ -207,36 +210,36 @@ function(car) {
 // Bad
 function(car) {
   var color = car.color;
-  
+
   if (color === 'red') {
-    
+
     return 'Car is red';
-    
+
   }
-  
+
   return 'Car is not red';
 }
 
 // Bad
 function(car) {
   var color = car.color;
-  
+
   if (color === 'red') {
-    return 'Car is red';    
+    return 'Car is red';
   }
-  
-  
+
+
   return 'Car is not red';
 }
 
 // Good
 function(car) {
   var color = car.color;
-  
+
   if (color === 'red') {
     return 'Car is red';
   }
-  
+
   return 'Car is not red';
 }
 
@@ -256,7 +259,7 @@ var object = {
   foo: function() {
     // ...
   },
-  
+
   bar: function() {
     // ...
   }
@@ -489,22 +492,22 @@ if (color === 'red') {
 ```JavaScript
 // Bad
 function(color) {
-  
+
   if (color === 'red') {
     var message = 'Car is red';
   }
-  
+
   // ...
 }
 
 // Good
 function(color) {
   var message;
-  
+
   if (color === 'red') {
     message = 'Car is red';
   }
-  
+
   // ...
 }
 ```
@@ -554,15 +557,15 @@ var colors = [];
 // Bad
 function getCountPerBrand(cars) {
   var brands = {};
-  
+
   for (var index = 0; index < cars.length; index++) {
     if (typeof brands[cars[index].brand] === 'undefined') {
       brands[cars[index].brand] = 0;
     }
-    
+
     brands[cars[index].brand] = brands[cars[index].brand] + 1;
   }
-  
+
   return brands;
 }
 
@@ -572,7 +575,7 @@ function getCountPerBrand(cars) {
     if (typeof brands[car.brand] === 'undefined') {
       brands[car.brand] = 0;
     }
-    
+
     brands[car.brand] = brands[car.brand] + 1;
     return brands;
   }, {});
@@ -618,7 +621,7 @@ function getColorCoolness(color) {
   if (COLORS_COOLNESS.indexOf(color) === -1) {
     return 5;
   }
-  
+
   return COLORS_COOLNESS[color];
 }
 ```
@@ -641,7 +644,7 @@ function registerCar(car) {
   if (!car) {
     return;
   }
-  
+
   // code to register the car ...
 }
 ```
@@ -669,7 +672,7 @@ car[property] = 'red';
 ## Functions
 
 - Functions are first class citizerns
-- 
+-
 
 ## Hoisting
 
